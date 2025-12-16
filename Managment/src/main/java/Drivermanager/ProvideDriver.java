@@ -6,7 +6,7 @@ package org.example.ScreenshotOnFailure;
  */
 import org.openqa.selenium.WebDriver;
 
-public class DriverManager {
+public class ProvideDriver {
 
     private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();
 

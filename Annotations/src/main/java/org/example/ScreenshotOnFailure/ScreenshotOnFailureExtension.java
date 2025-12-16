@@ -10,12 +10,11 @@ package org.example.ScreenshotOnFailure;
  * 4. Rethrowing the original exception
  */
 
+import Drivermanager.ProvideDriver;
 import org.junit.jupiter.api.extension.ExtensionContext;
-import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;
 import org.junit.jupiter.api.extension.TestWatcher;
 
 import java.lang.reflect.Method;
-import java.util.Optional;
 
 public class ScreenshotOnFailureExtension implements TestWatcher {
 
@@ -23,32 +22,31 @@ public class ScreenshotOnFailureExtension implements TestWatcher {
      * Triggered by TestWatcher on test failure.
      * When @ScreenshotOnFailure is present on the test,
      * a screenshot is captured and saved.
-     *
+     * <p>
      * Executed during the JUnit test lifecycle.
      */
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        ScreenshotOnFailure annotation = resolveAnnotation(context);
-        if (annotation != null) {
-            var driver = DriverManager.getDriver();
+        try {
+            ScreenshotOnFailure annotation = resolveAnnotation(context);
+            if (annotation != null) {
+                var driver = ProvideDriver.getDriver();
 
-            if (driver != null) {
-                ScreenshotUtils.captureScreenshot(driver, context);
+                if (driver != null) {
+                    ScreenshotUtils.captureScreenshot(driver, context);
 
-                if (annotation.savePageSource()) {
-                    ScreenshotUtils.savePageSource(driver, context);
-                }
+                    if (annotation.savePageSource()) {
+                        ScreenshotUtils.savePageSource(driver, context);
+                    }
 
-                if (annotation.uploadToReportPortal()) {
-                    ScreenshotUtils.uploadToReportPortal(driver, context);
+                    if (annotation.uploadToReportPortal()) {
+                        ScreenshotUtils.uploadToReportPortal(driver, context);
+                    }
                 }
             }
-        }
-        try {
-            throw cause; // Always rethrow the original error
-        } catch (Throwable e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace(); // רק לוג, לא לזרוק exception
         }
     }
 
