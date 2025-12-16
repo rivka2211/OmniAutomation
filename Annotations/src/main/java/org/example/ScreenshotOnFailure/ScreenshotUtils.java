@@ -6,6 +6,10 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.UUID;
+
 /**
  * Utility class for handling screenshot and related artifacts.
  * Provides support for: screenshot capture, page source saving,
@@ -21,11 +25,16 @@ public class ScreenshotUtils {
 
             Path folder = Path.of("screenshots");
             Files.createDirectories(folder);
+            String timestamp = LocalDateTime.now()
+                    .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss_SSS"));
+            Path dest = folder.resolve(
+                    context.getDisplayName() + "_screenshot_" + timestamp + ".png"
+            );
 
-            Path dest = folder.resolve(context.getDisplayName() + "_screenshot.png");
             Files.copy(src.toPath(), dest);
 
         } catch (Exception e) {
+
             // Logging intentionally avoided here, extension should not fail screenshot silently
         }
     }
@@ -39,8 +48,9 @@ public class ScreenshotUtils {
 
             Path folder = Path.of("pagesource");
             Files.createDirectories(folder);
-
-            Path dest = folder.resolve(context.getDisplayName() + "_pageSource.html");
+            String timestamp = LocalDateTime.now()
+                    .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss_SSS"));
+            Path dest = folder.resolve(context.getDisplayName() + "_pageSource_"+timestamp+".html");
             Files.writeString(dest, source);
 
         } catch (Exception e) {

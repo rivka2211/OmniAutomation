@@ -27,7 +27,7 @@ public class ExampleFailureTest {
     static void setup() {
          driver = new ChromeDriver();
         DriverManager.setDriver(driver);
-        driver.get("https://www.google.com/");
+        driver.get("https://translate.google.com/?hl=iw&sl=en&tl=iw&op=translate");
     }
 
     /**
@@ -37,7 +37,7 @@ public class ExampleFailureTest {
     @Test
     @ScreenshotOnFailure(savePageSource = false, uploadToReportPortal = false)
     void failingTestExample() {
-        Assertions.assertEquals("Not Google Title", driver.getTitle());
+        Assertions.assertEquals("something", driver.getTitle());
     }
 
     /**
