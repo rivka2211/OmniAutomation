@@ -1,4 +1,4 @@
-package org.example.ScreenshotOnFailure;
+package Drivermanager;
 
 /**
  * Central WebDriver provider using ThreadLocal.

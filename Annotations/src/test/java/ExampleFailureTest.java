@@ -7,12 +7,14 @@
  */
 
 
-import org.example.ScreenshotOnFailure.DriverManager;
+import Drivermanager.ProvideDriver;
 import org.example.ScreenshotOnFailure.ScreenshotOnFailure;
 import org.example.ScreenshotOnFailure.ScreenshotOnFailureExtension;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -25,9 +27,17 @@ public class ExampleFailureTest {
      */
     @BeforeAll
     static void setup() {
-         driver = new ChromeDriver();
-        DriverManager.setDriver(driver);
+        driver = new ChromeDriver();
+        ProvideDriver.setDriver(driver);
         driver.get("https://translate.google.com/?hl=iw&sl=en&tl=iw&op=translate");
+    }
+
+    /**
+     * Cleans up WebDriver after test.
+     */
+    @AfterAll
+    static void teardown() {
+        ProvideDriver.quitDriver();
     }
 
     /**
@@ -37,15 +47,8 @@ public class ExampleFailureTest {
     @Test
     @ScreenshotOnFailure(savePageSource = false, uploadToReportPortal = false)
     void failingTestExample() {
-        Assertions.assertEquals("something", driver.getTitle());
-    }
 
-    /**
-     * Cleans up WebDriver after test.
-     */
-    @AfterAll
-    static void teardown() {
-        DriverManager.quitDriver();
+        Assertions.assertEquals("something", driver.getTitle());
     }
 }
 
