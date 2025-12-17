@@ -46,7 +46,7 @@ public class ScreenshotOnFailureExtension implements TestWatcher {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace(); // רק לוג, לא לזרוק exception
+            e.printStackTrace();
         }
     }
 
