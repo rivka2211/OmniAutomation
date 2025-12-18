@@ -28,7 +28,7 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>Managment</artifactId>
+            <artifactId>Management</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

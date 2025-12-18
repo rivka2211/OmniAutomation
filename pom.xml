@@ -11,7 +11,7 @@
     <modules>
         <module>Selenium</module>
         <module>Annotations</module>
-        <module>Managment</module>
+        <module>Management</module>
         <module>Report</module>
     </modules>
 
