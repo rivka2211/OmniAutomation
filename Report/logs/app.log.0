@@ -1,0 +1,661 @@
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.aop.UnsafeClassDefiner tryPrivileged
+FINE: Cannot bind Unsafe.defineAnonymousClass
+java.lang.ExceptionInInitializerError
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:41)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.tryPrivileged(UnsafeClassDefiner.java:130)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.<clinit>(UnsafeClassDefiner.java:60)
+	at com.google.inject.internal.aop.ClassDefining.bindClassDefiner(ClassDefining.java:68)
+	at com.google.inject.internal.aop.ClassDefining$ClassDefinerHolder.<clinit>(ClassDefining.java:38)
+	at com.google.inject.internal.aop.ClassDefining.hasPackageAccess(ClassDefining.java:49)
+	at com.google.inject.internal.aop.ClassBuilding.canFastInvoke(ClassBuilding.java:227)
+	at com.google.inject.internal.BytecodeGen.fastConstructor(BytecodeGen.java:134)
+	at com.google.inject.internal.DefaultConstructionProxyFactory.create(DefaultConstructionProxyFactory.java:51)
+	at com.google.inject.internal.ConstructorBindingImpl.<init>(ConstructorBindingImpl.java:73)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:184)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:158)
+	at org.eclipse.sisu.wire.LocatorWiring.bindImplicitType(LocatorWiring.java:240)
+	at org.eclipse.sisu.wire.LocatorWiring.bindBeanImport(LocatorWiring.java:222)
+	at org.eclipse.sisu.wire.LocatorWiring.wire(LocatorWiring.java:91)
+	at org.eclipse.sisu.wire.ElementAnalyzer.apply(ElementAnalyzer.java:150)
+	at org.eclipse.sisu.wire.WireModule.configure(WireModule.java:79)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:409)
+	at com.google.inject.spi.Elements.getElements(Elements.java:108)
+	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:160)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.codehaus.plexus.DefaultPlexusContainer.addPlexusInjector(DefaultPlexusContainer.java:482)
+	at org.codehaus.plexus.DefaultPlexusContainer.<init>(DefaultPlexusContainer.java:207)
+	at org.apache.maven.cli.MavenCli.container(MavenCli.java:648)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:277)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:206)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:283)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:226)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:407)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:348)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+Caused by: java.lang.NoSuchMethodException: sun.misc.Unsafe.defineAnonymousClass(java.lang.Class,[B,[Ljava.lang.Object;)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:39)
+	... 38 more
+
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 1279ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 3ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 4ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 53ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 2ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 2ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 138ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 3ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 6ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 1ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 30ms
+דצמ׳ 18, 2025 2:03:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 2ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.aop.UnsafeClassDefiner tryPrivileged
+FINE: Cannot bind Unsafe.defineAnonymousClass
+java.lang.ExceptionInInitializerError
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:41)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.tryPrivileged(UnsafeClassDefiner.java:130)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.<clinit>(UnsafeClassDefiner.java:60)
+	at com.google.inject.internal.aop.ClassDefining.bindClassDefiner(ClassDefining.java:68)
+	at com.google.inject.internal.aop.ClassDefining$ClassDefinerHolder.<clinit>(ClassDefining.java:38)
+	at com.google.inject.internal.aop.ClassDefining.hasPackageAccess(ClassDefining.java:49)
+	at com.google.inject.internal.aop.ClassBuilding.canFastInvoke(ClassBuilding.java:227)
+	at com.google.inject.internal.BytecodeGen.fastConstructor(BytecodeGen.java:134)
+	at com.google.inject.internal.DefaultConstructionProxyFactory.create(DefaultConstructionProxyFactory.java:51)
+	at com.google.inject.internal.ConstructorBindingImpl.<init>(ConstructorBindingImpl.java:73)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:184)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:158)
+	at org.eclipse.sisu.wire.LocatorWiring.bindImplicitType(LocatorWiring.java:240)
+	at org.eclipse.sisu.wire.LocatorWiring.bindBeanImport(LocatorWiring.java:222)
+	at org.eclipse.sisu.wire.LocatorWiring.wire(LocatorWiring.java:91)
+	at org.eclipse.sisu.wire.ElementAnalyzer.apply(ElementAnalyzer.java:150)
+	at org.eclipse.sisu.wire.WireModule.configure(WireModule.java:79)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:409)
+	at com.google.inject.spi.Elements.getElements(Elements.java:108)
+	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:160)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.codehaus.plexus.DefaultPlexusContainer.addPlexusInjector(DefaultPlexusContainer.java:482)
+	at org.codehaus.plexus.DefaultPlexusContainer.<init>(DefaultPlexusContainer.java:207)
+	at org.apache.maven.cli.MavenCli.container(MavenCli.java:648)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:277)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:206)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:283)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:226)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:407)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:348)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+Caused by: java.lang.NoSuchMethodException: sun.misc.Unsafe.defineAnonymousClass(java.lang.Class,[B,[Ljava.lang.Object;)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:39)
+	... 38 more
+
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 1595ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 2ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 3ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 4ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 1ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 49ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 1ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 1ms
+דצמ׳ 18, 2025 2:20:19 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 139ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 1ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 1ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 3ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 7ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 1ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 1ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 30ms
+דצמ׳ 18, 2025 2:20:20 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 2ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 437ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 2ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 1ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:20:21 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 3ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 3ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 5ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 4ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 10ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 408ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 3ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 4ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 5ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 1ms
+דצמ׳ 18, 2025 2:20:22 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 289ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 1ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 1ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 3ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 1ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 511ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 1ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 3ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 43ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 1ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 0ms
+דצמ׳ 18, 2025 2:20:30 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 2ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 69ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 0ms
+דצמ׳ 18, 2025 2:20:31 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.aop.UnsafeClassDefiner tryPrivileged
+FINE: Cannot bind Unsafe.defineAnonymousClass
+java.lang.ExceptionInInitializerError
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:41)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.tryPrivileged(UnsafeClassDefiner.java:130)
+	at com.google.inject.internal.aop.UnsafeClassDefiner.<clinit>(UnsafeClassDefiner.java:60)
+	at com.google.inject.internal.aop.ClassDefining.bindClassDefiner(ClassDefining.java:68)
+	at com.google.inject.internal.aop.ClassDefining$ClassDefinerHolder.<clinit>(ClassDefining.java:38)
+	at com.google.inject.internal.aop.ClassDefining.hasPackageAccess(ClassDefining.java:49)
+	at com.google.inject.internal.aop.ClassBuilding.canFastInvoke(ClassBuilding.java:227)
+	at com.google.inject.internal.BytecodeGen.fastConstructor(BytecodeGen.java:134)
+	at com.google.inject.internal.DefaultConstructionProxyFactory.create(DefaultConstructionProxyFactory.java:51)
+	at com.google.inject.internal.ConstructorBindingImpl.<init>(ConstructorBindingImpl.java:73)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:184)
+	at com.google.inject.internal.BindingBuilder.toConstructor(BindingBuilder.java:158)
+	at org.eclipse.sisu.wire.LocatorWiring.bindImplicitType(LocatorWiring.java:240)
+	at org.eclipse.sisu.wire.LocatorWiring.bindBeanImport(LocatorWiring.java:222)
+	at org.eclipse.sisu.wire.LocatorWiring.wire(LocatorWiring.java:91)
+	at org.eclipse.sisu.wire.ElementAnalyzer.apply(ElementAnalyzer.java:150)
+	at org.eclipse.sisu.wire.WireModule.configure(WireModule.java:79)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:409)
+	at com.google.inject.spi.Elements.getElements(Elements.java:108)
+	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:160)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.codehaus.plexus.DefaultPlexusContainer.addPlexusInjector(DefaultPlexusContainer.java:482)
+	at org.codehaus.plexus.DefaultPlexusContainer.<init>(DefaultPlexusContainer.java:207)
+	at org.apache.maven.cli.MavenCli.container(MavenCli.java:648)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:277)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:206)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:283)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:226)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:407)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:348)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+Caused by: java.lang.NoSuchMethodException: sun.misc.Unsafe.defineAnonymousClass(java.lang.Class,[B,[Ljava.lang.Object;)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at com.google.inject.internal.aop.AnonymousClassDefiner.<clinit>(AnonymousClassDefiner.java:39)
+	... 38 more
+
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 1303ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 2ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 4ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 4ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 51ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 145ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 3ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 1ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 8ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 2ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 33ms
+דצמ׳ 18, 2025 2:37:35 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 1ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 55ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 1ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 4ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 1ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 2ms
+דצמ׳ 18, 2025 2:37:36 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 73ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 2ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 4ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 2ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 1ms
+דצמ׳ 18, 2025 2:37:37 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 75ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 1ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 1ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 3ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 2ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 5ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 2ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 1ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 2ms
+דצמ׳ 18, 2025 2:37:40 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 168ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 3ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 43ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 1ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module execution: 15ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Interceptors creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: TypeListeners & ProvisionListener creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Scopes creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Converters creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Module annotated method scanners creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Private environment creation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Injector construction: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding indexing: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Collecting injection requests: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Binding validation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static validation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance member validation: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Provider verification: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Delayed Binding initialization: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Static member injection: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Instance injection: 0ms
+דצמ׳ 18, 2025 2:37:43 אחה״צ com.google.inject.internal.util.ContinuousStopwatch resetAndLog
+FINE: Preloading singletons: 0ms

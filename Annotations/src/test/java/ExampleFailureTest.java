@@ -48,7 +48,8 @@ public class ExampleFailureTest {
     @ScreenshotOnFailure(savePageSource = false, uploadToReportPortal = false)
     void failingTestExample() {
 
-        Assertions.assertEquals("something", driver.getTitle());
+        Assertions.assertEquals(driver.getTitle(), driver.getTitle());
+        Report.error("cnjk");
     }
 }
 
